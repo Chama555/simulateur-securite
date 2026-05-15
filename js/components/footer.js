@@ -35,7 +35,7 @@ const Footer = {
                         <div class="footer-section">
                             <h4><a href="/problematique" >Informations</a></h4>
                             <p class="footer-info">© ${currentYear} CDG. Tous droits réservés.</p>
-                            <p class="footer-info">Version 2.0.0 - Février 2026</p>
+                            <p class="footer-info">Version 2.0.0 - Mai 2026</p>
                         </div>
                     </div>
                     
