@@ -1030,7 +1030,7 @@ score = α × impact + β × (1 - budget/budget_max) + γ × similarité_dimensi
                 </ul>
 
                 <div class="note-box">
-                    <p>Les données sont mises à jour trimestriellement. Dernière mise à jour : Février 2026</p>
+                    <p>Les données sont mises à jour trimestriellement. Dernière mise à jour : Mai 2026</p>
                 </div>
             </div>
         `;
