@@ -464,7 +464,7 @@ pages.Admin = {
                 <div class="maintenance-grid">
                     <div class="maintenance-card">
                         <div class="card-icon">
-                            <span class="material-symbols-outlined">optimization</span>
+                            <span class="material-symbols-outlined">tune</span>
                         </div>
                         <h4>Optimiser la base de données</h4>
                         <p>Compacter et optimiser les index</p>
