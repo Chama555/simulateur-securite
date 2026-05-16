@@ -272,7 +272,7 @@ pages.Documentation = {
                 
                 <div class="feature-screenshot">
                     <div class="screenshot-placeholder">
-                        <img src="assets/pistes.png" alt="Aperçu de la page Explorer">
+                        <img src="/assets/pistes.png" alt="Aperçu de la page Explorer">
                         <p>Aperçu de la page Explorer</p>
                     </div>
                 </div>
@@ -409,7 +409,7 @@ pages.Documentation = {
                 
                 <div class="feature-screenshot">
                     <div class="screenshot-placeholder">
-                        <img src="assets/comparateur.png" alt="Aperçu du Comparateur">
+                        <img src="/assets/comparateur.png" alt="Aperçu du Comparateur">
                         <p>Aperçu de la page Comparaison</p>
                     </div>
                 </div>
@@ -464,7 +464,7 @@ pages.Documentation = {
                 
                 <div class="feature-screenshot">
                     <div class="screenshot-placeholder">
-                        <img src="assets/edition-pistes.png" alt="Édition des pistes">
+                        <img src="/assets/edition-pistes.png" alt="Édition des pistes">
                         <p>Aperçu de l'éditeur</p>
                     </div>
                 </div>
@@ -526,7 +526,7 @@ pages.Documentation = {
                 
                 <div class="feature-screenshot">
                     <div class="screenshot-placeholder">
-                        <img src="assets/decision-export.png" alt="Décision et export">
+                        <img src="/assets/decision-export.png" alt="Décision et export">
                         <p>Aperçu de la page Décision</p>
                     </div>
                 </div>
