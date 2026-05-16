@@ -106,7 +106,7 @@ pages.Documentation = {
                                         Priorisation
                                     </a>
                                     <a href="#methodologie-optimisation" class="nav-link ${this.activeSubsection === 'optimisation' ? 'active' : ''}" onclick="pages.Documentation.navigateTo('methodologie', 'optimisation')">
-                                        <span class="material-symbols-outlined">optimization</span>
+                                        <span class="material-symbols-outlined">tune</span>
                                         Optimisation multicritères
                                     </a>
                                 </div>
