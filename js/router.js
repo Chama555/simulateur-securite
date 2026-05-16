@@ -6,8 +6,8 @@ class Router {
     constructor() {
         this.routes = {};
         this.currentPath = '/';
+        this.baseUrl = this.resolveBaseUrl();
         this.publicRoutes = new Set([
-            '/',
             '/connexion',
             '/documentation',
             '/modeemploie',
@@ -17,6 +17,50 @@ class Router {
             '/apropos'
         ]);
         this.adminRoutes = new Set(['/admin', '/edition']);
+    }
+
+    resolveBaseUrl() {
+        const siteBaseUrl = '/site/index.html';
+        const pathname = window.location.pathname || '/';
+        if (pathname === '/' || pathname.startsWith('/site/')) {
+            return siteBaseUrl;
+        }
+
+        if (pathname.endsWith('.html')) {
+            return pathname;
+        }
+
+        const routerScript = document.querySelector('script[src*="js/router.js"]');
+        if (routerScript?.src) {
+            const scriptUrl = new URL(routerScript.src, window.location.href);
+            return scriptUrl.pathname.replace(/js\/router\.js$/, 'index.html');
+        }
+
+        return pathname.endsWith('/') ? `${pathname}index.html` : `${pathname}/index.html`;
+    }
+
+    normalizePath(path) {
+        path = String(path || '/').split('?')[0].split('#')[0];
+        path = path.startsWith('/') ? path : '/' + path;
+
+        if (path === this.baseUrl) {
+            return '/';
+        }
+
+        const baseDirectory = this.baseUrl.replace(/\/[^/]*$/, '');
+        if (baseDirectory && path.startsWith(`${baseDirectory}/`)) {
+            path = path.slice(baseDirectory.length) || '/';
+        }
+
+        if (path === '/index.html') {
+            return '/';
+        }
+
+        return path;
+    }
+
+    getBrowserUrl(path) {
+        return path === '/' ? this.baseUrl : `${this.baseUrl}#${path}`;
     }
 
     /**
@@ -34,8 +78,7 @@ class Router {
         let { replaceState = false } = options;
 
         // Nettoyer le chemin
-        path = path.split('?')[0];
-        path = path.startsWith('/') ? path : '/' + path;
+        path = this.normalizePath(path);
 
         const accessControl = this.enforceAccess(path);
         if (accessControl.redirectPath) {
@@ -92,10 +135,11 @@ class Router {
             }
 
             if (!fromPopState) {
+                const browserUrl = this.getBrowserUrl(path);
                 if (replaceState) {
-                    window.history.replaceState({ path }, '', path);
+                    window.history.replaceState({ path }, '', browserUrl);
                 } else {
-                    window.history.pushState({ path }, '', path);
+                    window.history.pushState({ path }, '', browserUrl);
                 }
             }
 
@@ -182,7 +226,7 @@ class Router {
      */
     init() {
         window.addEventListener('popstate', (e) => {
-            const path = e.state?.path || window.location.pathname || '/';
+            const path = e.state?.path || window.location.hash.slice(1) || window.location.pathname || '/';
             this.navigate(path, { fromPopState: true });
         });
 
@@ -191,14 +235,20 @@ class Router {
             if (!link) return;
 
             const href = link.getAttribute('href');
-            if (href.startsWith('http') || href.startsWith('#')) return;
+            if (
+                href.startsWith('http') ||
+                href.startsWith('#') ||
+                href.startsWith('mailto:') ||
+                href.startsWith('tel:')
+            ) return;
 
             e.preventDefault();
             this.navigate(href);
         });
 
-        const path = window.location.pathname || '/';
-        this.navigate(path, { replaceState: true });
+        const path = window.location.hash.slice(1) || window.location.pathname || '/';
+        const normalizedPath = this.normalizePath(path);
+        this.navigate(normalizedPath, { replaceState: true });
     }
 }
 
