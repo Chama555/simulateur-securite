@@ -217,19 +217,40 @@ pages.Explore = {
 
         let html = '<div class="pagination-controls">';
         html += '<button class="pagination-prev" id="prev-btn">‹</button>';
-        
-        for (let i = 1; i <= Math.min(totalPages, 6); i++) {
-            html += `<button class="pagination-num ${i === this.currentPage ? 'active' : ''}" data-page="${i}">${i}</button>`;
-        }
-        
-        if (totalPages > 6) {
-            html += '<span class="pagination-dots">...</span>';
-            html += `<button class="pagination-num ${totalPages === this.currentPage ? 'active' : ''}" data-page="${totalPages}">${totalPages}</button>`;
-        }
-        
+
+        const visiblePages = this.getVisiblePaginationPages(totalPages);
+        let previousPage = 0;
+
+        visiblePages.forEach(page => {
+            if (previousPage && page - previousPage > 1) {
+                html += '<span class="pagination-dots">...</span>';
+            }
+
+            html += `<button class="pagination-num ${page === this.currentPage ? 'active' : ''}" data-page="${page}">${page}</button>`;
+            previousPage = page;
+        });
+
         html += '<button class="pagination-next" id="next-btn">›</button>';
         html += '</div>';
         return html;
+    },
+
+    getVisiblePaginationPages(totalPages) {
+        const currentPage = Math.min(Math.max(this.currentPage, 1), totalPages);
+
+        if (totalPages <= 7) {
+            return Array.from({ length: totalPages }, (_, index) => index + 1);
+        }
+
+        const pages = new Set([1, totalPages]);
+        const windowStart = Math.max(2, currentPage - 2);
+        const windowEnd = Math.min(totalPages - 1, currentPage + 2);
+
+        for (let page = windowStart; page <= windowEnd; page++) {
+            pages.add(page);
+        }
+
+        return Array.from(pages).sort((a, b) => a - b);
     },
 
     getPriorityColor(priority) {
