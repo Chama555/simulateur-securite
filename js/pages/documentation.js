@@ -1154,7 +1154,27 @@ score = α × impact + β × (1 - budget/budget_max) + γ × similarité_dimensi
     navigateTo(section, subsection) {
         this.activeSection = section;
         this.activeSubsection = subsection;
+        window.history.replaceState(
+            window.history.state,
+            '',
+            `${window.location.pathname}#${section}-${subsection}`
+        );
         this.rerender();
+    },
+
+    applyHashNavigation(hash) {
+        const anchor = String(hash || '').replace(/^#/, '');
+        const parts = anchor.split('-');
+        if (parts.length < 2) return;
+
+        const section = parts.shift();
+        const subsection = parts.join('-');
+        const validSections = ['guide', 'architecture', 'methodologie', 'references'];
+
+        if (!validSections.includes(section) || !subsection) return;
+
+        this.activeSection = section;
+        this.activeSubsection = subsection;
     },
 
     searchDocs(query) {
