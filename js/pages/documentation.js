@@ -1097,8 +1097,7 @@ score = α × impact + β × (1 - budget/budget_max) + γ × similarité_dimensi
                     <div class="contact-card">
                         <span class="material-symbols-outlined">forum</span>
                         <h3>Chat</h3>
-                        <p>Support en ligne</p>
-                        <p><a href="#" onclick="alert('Formulaire des ticket à implémenter')">Ouvrir un ticket</a></p>
+                        <p><a href="#" onclick="alert('Formulaire des ticket à implémenter')">Support en ligne</a></p>
                     </div>
 
                     <div class="contact-card">
