@@ -1122,9 +1122,9 @@ score = α × impact + β × (1 - budget/budget_max) + γ × similarité_dimensi
                             <p>Expert sécurité</p>
                         </div>
                         <div class="team-member">
-                            <div class="member-avatar">PF</div>
+                            <div class="member-avatar">CEL</div>
                             <h4>Chama EL KHEMSANI</h4>
-                            <p>Coordination-Développement</p>
+                            <p>Développement</p>
                         </div>
                         <div class="team-member">
                             <div class="member-avatar">NL</div>
