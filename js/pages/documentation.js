@@ -207,22 +207,22 @@ pages.Documentation = {
                 <h3>Concepts clés</h3>
                 <div class="concepts-grid">
                     <div class="concept-card">
-                        <span class="concept-icon">🎯</span>
+                        <span class="concept-icon"></span>
                         <h4>Pistes</h4>
                         <p>Actions d'amélioration potentielles, chacune avec son budget, son impact et ses caractéristiques</p>
                     </div>
                     <div class="concept-card">
-                        <span class="concept-icon">📊</span>
+                        <span class="concept-icon"></span>
                         <h4>Dimensions</h4>
                         <p>5 axes d'analyse (Culture, Technique, Humain, Organisationnel, Économique)</p>
                     </div>
                     <div class="concept-card">
-                        <span class="concept-icon">🔄</span>
+                        <span class="concept-icon"></span>
                         <h4>Scénarios</h4>
                         <p>Combinaisons de pistes sauvegardées pour comparaison</p>
                     </div>
                     <div class="concept-card">
-                        <span class="concept-icon">⚖️</span>
+                        <span class="concept-icon"></span>
                         <h4>Optimisation</h4>
                         <p>Algorithmes pour trouver les meilleures combinaisons sous contraintes</p>
                     </div>
@@ -272,7 +272,7 @@ pages.Documentation = {
                 
                 <div class="feature-screenshot">
                     <div class="screenshot-placeholder">
-                        <span class="material-symbols-outlined">image</span>
+                        <img src="assets/pistes.png" alt="Aperçu de la page Explorer">
                         <p>Aperçu de la page Explorer</p>
                     </div>
                 </div>
@@ -342,7 +342,7 @@ pages.Documentation = {
                 
                 <div class="feature-screenshot">
                     <div class="screenshot-placeholder">
-                        <span class="material-symbols-outlined">image</span>
+                        <img src="assets/screenshot.png" alt="Aperçu du Simulateur">
                         <p>Aperçu du Simulateur</p>
                     </div>
                 </div>
@@ -409,7 +409,7 @@ pages.Documentation = {
                 
                 <div class="feature-screenshot">
                     <div class="screenshot-placeholder">
-                        <span class="material-symbols-outlined">image</span>
+                        <img src="assets/comparateur.png" alt="Aperçu du Comparateur">
                         <p>Aperçu de la page Comparaison</p>
                     </div>
                 </div>
@@ -464,7 +464,7 @@ pages.Documentation = {
                 
                 <div class="feature-screenshot">
                     <div class="screenshot-placeholder">
-                        <span class="material-symbols-outlined">image</span>
+                        <img src="assets/edition-pistes.png" alt="Édition des pistes">
                         <p>Aperçu de l'éditeur</p>
                     </div>
                 </div>
@@ -526,7 +526,7 @@ pages.Documentation = {
                 
                 <div class="feature-screenshot">
                     <div class="screenshot-placeholder">
-                        <span class="material-symbols-outlined">image</span>
+                        <img src="assets/decision-export.png" alt="Décision et export">
                         <p>Aperçu de la page Décision</p>
                     </div>
                 </div>
