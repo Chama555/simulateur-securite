@@ -247,7 +247,7 @@ pages.Apropos = {
                             </div>
                         </div>
                         <div class="timeline-item">
-                            <div class="timeline-date">Mai 2026</div>
+                            <div class="timeline-date">Février 2026</div>
                             <div class="timeline-content">
                                 <h4>Développement prototype</h4>
                                 <p>Première version du simulateur</p>
@@ -318,16 +318,16 @@ pages.Apropos = {
 
                         <div class="team-card leader">
                             <div class="member-photo" style="background: linear-gradient(135deg, #10B981, #059669);">
-                                <span>PF</span>
+                                <span>CEL</span>
                             </div>
-                            <h4>Patricia FAVRET</h4>
+                            <h4>Chama EL KHEMSANI</h4>
                             <p class="member-role">Coordinatrice</p>
-                            <p class="member-desc">Coordination des parties prenantes et déploiement opérationnel</p>
+                            <p class="member-desc">Developpement et déploiement opérationnel</p>
                             <div class="member-contact">
-                                <a href="mailto:patricia.favret@cdg2026.fr">
+                                <a href="mailto:chama.elkhemsani@cdg2026.fr">
                                     <span class="material-symbols-outlined">mail</span>
                                 </a>
-                                <a href="https://linkedin.com/in/patriciafavret" target="_blank">
+                                <a href="https://linkedin.com/in/chamaelkhemsani" target="_blank">
                                     <span class="material-symbols-outlined">linkedin</span>
                                 </a>
                             </div>
@@ -335,40 +335,40 @@ pages.Apropos = {
                     </div>
                 </div>
 
-                <!-- Équipe technique -->
+                <!-- Équipe technique >
                 <div class="team-section">
                     <h3>Équipe technique</h3>
                     <div class="team-grid">
                         <div class="team-card">
                             <div class="member-photo" style="background: #64748b;">
-                                <span>JD</span>
+                                <span>xx</span>
                             </div>
-                            <h4>Jean DUPONT</h4>
+                            <h4>xxxx xxxx</h4>
                             <p class="member-role">Lead développeur</p>
                             <p class="member-desc">Architecture et développement front-end</p>
                         </div>
 
                         <div class="team-card">
                             <div class="member-photo" style="background: #64748b;">
-                                <span>SM</span>
+                                <span>yy</span>
                             </div>
-                            <h4>Sophie MARTIN</h4>
+                            <h4>yyyy yyyy</h4>
                             <p class="member-role">Data scientist</p>
                             <p class="member-desc">Algorithmes d'optimisation et modélisation</p>
                         </div>
 
                         <div class="team-card">
                             <div class="member-photo" style="background: #64748b;">
-                                <span>PL</span>
+                                <span>zz</span>
                             </div>
-                            <h4>Pierre LEROY</h4>
+                            <h4>zzzz zzzz</h4>
                             <p class="member-role">UX/UI Designer</p>
                             <p class="member-desc">Design d'interface et expérience utilisateur</p>
                         </div>
                     </div>
-                </div>
+                </div-->
 
-                <!-- Comité de pilotage -->
+                <!-- Comité de pilotage >
                 <div class="team-section">
                     <h3>Comité de pilotage</h3>
                     <div class="steering-committee">
@@ -401,7 +401,7 @@ pages.Apropos = {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div-->
 
                 <!-- Nous rejoindre -->
                 <div class="join-section">

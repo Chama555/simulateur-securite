@@ -1123,8 +1123,8 @@ score = α × impact + β × (1 - budget/budget_max) + γ × similarité_dimensi
                         </div>
                         <div class="team-member">
                             <div class="member-avatar">PF</div>
-                            <h4>Patricia FAVRET</h4>
-                            <p>Coordination</p>
+                            <h4>Chama EL KHEMSANI</h4>
+                            <p>Coordination-Développement</p>
                         </div>
                         <div class="team-member">
                             <div class="member-avatar">NL</div>

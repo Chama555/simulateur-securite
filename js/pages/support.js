@@ -414,8 +414,8 @@ pages.Support = {
                         </div>
                         <div class="team-member">
                             <div class="member-avatar" style="background: #10b981;">PF</div>
-                            <h4>Patricia FAVRET</h4>
-                            <p>Support utilisateur</p>
+                            <h4>Chama ELKHEMSANI</h4>
+                            <p>Support plateforme</p>
 
                         </div>
                         <div class="team-member">

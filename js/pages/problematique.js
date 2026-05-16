@@ -486,15 +486,17 @@ pages.Problematique = {
                                 <div class="contact">
                                     <span class="contact-name">Michel RAGOT</span>
                                     <a href="mailto:michelragot5@gmail.com">michelragot5@gmail.com</a>
-                                    <span>06 33 90 50 53</span>
+                                    <span>xx xx xx xx xx</span>
                                 </div>
                                 <div class="contact">
                                     <span class="contact-name">Claude DEORESTIS</span>
                                     <a href="mailto:claude.deorestis@outlook.fr">claude.deorestis@outlook.fr</a>
-                                    <span>06 71 60 48 79</span>
+                                    <span>xx xx xx xx xx</span>
                                 </div>
                                 <div class="contact">
-                                    <span class="contact-name">Patricia FAVRET</span>
+                                    <span class="contact-name">Chama EL KHEMSANI </span>
+                                    <a href="mailto:chama.elkhemsani@gmail.com">chama.elkhemsani@gmail.com</a>
+                                    <span>xx xx xx xx xx</span>
                                 </div>
                             </div>
                         </div>
