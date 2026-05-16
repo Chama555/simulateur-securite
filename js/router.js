@@ -75,6 +75,7 @@ class Router {
      */
     async navigate(path, options = {}) {
         const { fromPopState = false } = options;
+        const { skipHistory = false } = options;
         let { replaceState = false } = options;
 
         // Nettoyer le chemin
@@ -134,7 +135,7 @@ class Router {
                 if (Header.setupEventListeners) Header.setupEventListeners();
             }
 
-            if (!fromPopState) {
+            if (!fromPopState && !skipHistory) {
                 const browserUrl = this.getBrowserUrl(path);
                 if (replaceState) {
                     window.history.replaceState({ path }, '', browserUrl);
@@ -226,7 +227,8 @@ class Router {
      */
     init() {
         window.addEventListener('popstate', (e) => {
-            const path = e.state?.path || window.location.hash.slice(1) || window.location.pathname || '/';
+            const hashPath = this.getRoutePathFromHash();
+            const path = e.state?.path || hashPath || window.location.pathname || '/';
             this.navigate(path, { fromPopState: true });
         });
 
@@ -246,9 +248,24 @@ class Router {
             this.navigate(href);
         });
 
-        const path = window.location.hash.slice(1) || window.location.pathname || '/';
+        const hashPath = this.getRoutePathFromHash();
+        if (window.location.hash && !hashPath) {
+            const anchor = window.location.hash.slice(1);
+            if (window.pages?.Documentation?.applyHashNavigation) {
+                window.pages.Documentation.applyHashNavigation(anchor);
+            }
+            this.navigate('/documentation', { replaceState: true, skipHistory: true });
+            return;
+        }
+
+        const path = hashPath || window.location.pathname || '/';
         const normalizedPath = this.normalizePath(path);
         this.navigate(normalizedPath, { replaceState: true });
+    }
+
+    getRoutePathFromHash() {
+        const hash = window.location.hash.slice(1);
+        return hash.startsWith('/') ? hash : '';
     }
 }
 
